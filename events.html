@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect - Events</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-light">
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="logo">Campus Connect</h2>
+            <div class="nav-links">
+                <a href="dashboard.html">Home</a>
+                <a href="events.html" class="active" data-testid="nav-events">Events</a>
+                <a href="groups.html" data-testid="nav-groups">Groups</a>
+                <a href="profile.html" class="btn btn-outline" data-testid="nav-profile">Profile</a>
+                <a href="index.html" class="btn btn-outline" data-testid="nav-logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <main class="page-container">
+        <header class="page-heading">
+            <div>
+                <p class="eyebrow">CAMPUS LIFE</p>
+                <h1>Campus Events</h1>
+                <p class="page-intro">Discover upcoming campus events, register to attend, or create an event for other students.</p>
+            </div>
+        </header>
+        <div class="page-layout">
+            <section>
+                <div class="section-heading"><h2>Upcoming and listed events</h2><span class="muted-text">Your registrations are saved in this browser</span></div>
+                <div class="listing-grid" data-testid="events-list" aria-live="polite"></div>
+            </section>
+            <aside class="card form-card">
+                <h2>Create an event</h2>
+                <p class="form-help">Add an event with its date, time, and location.</p>
+                <div class="message-box" data-testid="message-box" hidden></div>
+                <form id="eventForm" class="stacked-form">
+                    <div class="form-group"><label for="eventTitle">Event name</label><input id="eventTitle" name="title" type="text" maxlength="100" required placeholder="e.g. Coding workshop"></div>
+                    <div class="form-group"><label for="eventCategory">Category</label><select id="eventCategory" name="category" required><option value="Technology">Technology</option><option value="Workshop">Workshop</option><option value="Career">Career</option><option value="Cultural">Cultural</option><option value="Sports">Sports</option><option value="Other">Other</option></select></div>
+                    <div class="form-group"><label for="eventDate">Date</label><input id="eventDate" name="date" type="date" required></div>
+                    <div class="form-group"><label for="eventTime">Time</label><input id="eventTime" name="time" type="time" required></div>
+                    <div class="form-group"><label for="eventLocation">Location</label><input id="eventLocation" name="location" type="text" maxlength="120" required placeholder="Building or room"></div>
+                    <div class="form-group"><label for="eventDescription">Description</label><textarea id="eventDescription" name="description" rows="3" maxlength="500" required placeholder="What should attendees know?"></textarea></div>
+                    <button type="submit" class="btn btn-primary btn-block">Create event</button>
+                </form>
+            </aside>
+        </div>
+    </main>
+    <footer class="site-footer"><p>Campus Connect Template - Designed for Software Engineering Lab</p></footer>
+</body>
+</html>

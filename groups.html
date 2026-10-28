@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect - Groups</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-light">
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="logo">Campus Connect</h2>
+            <div class="nav-links">
+                <a href="dashboard.html">Home</a>
+                <a href="events.html" data-testid="nav-events">Events</a>
+                <a href="groups.html" class="active" data-testid="nav-groups">Groups</a>
+                <a href="profile.html" class="btn btn-outline" data-testid="nav-profile">Profile</a>
+                <a href="index.html" class="btn btn-outline" data-testid="nav-logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <main class="page-container">
+        <header class="page-heading">
+            <div>
+                <p class="eyebrow">FIND YOUR PEOPLE</p>
+                <h1>Campus Groups</h1>
+                <p class="page-intro">Join a study or interest group, meet students with similar goals, or create a new community.</p>
+            </div>
+        </header>
+        <div class="page-layout">
+            <section>
+                <div class="section-heading"><h2>Explore groups</h2><span class="muted-text">Membership is saved in this browser</span></div>
+                <div class="listing-grid" data-testid="groups-list" aria-live="polite"></div>
+            </section>
+            <aside class="card form-card">
+                <h2>Create a group</h2>
+                <p class="form-help">Start a group around a subject, activity, or shared interest.</p>
+                <div class="message-box" data-testid="message-box" hidden></div>
+                <form id="groupForm" class="stacked-form">
+                    <div class="form-group"><label for="groupName">Group name</label><input id="groupName" name="name" type="text" maxlength="100" required placeholder="e.g. Competitive Programming"></div>
+                    <div class="form-group"><label for="groupCategory">Category</label><select id="groupCategory" name="category" required><option value="Technology">Technology</option><option value="Study Group">Study Group</option><option value="Career">Career</option><option value="Cultural">Cultural</option><option value="Sports">Sports</option><option value="Other">Other</option></select></div>
+                    <div class="form-group"><label for="groupDescription">Description</label><textarea id="groupDescription" name="description" rows="4" maxlength="500" required placeholder="What is this group for?"></textarea></div>
+                    <button type="submit" class="btn btn-primary btn-block">Create group</button>
+                </form>
+            </aside>
+        </div>
+    </main>
+    <footer class="site-footer"><p>Campus Connect Template - Designed for Software Engineering Lab</p></footer>
+</body>
+</html>
